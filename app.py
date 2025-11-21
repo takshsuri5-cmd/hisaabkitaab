@@ -9,7 +9,6 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import openai
-openai.api_key = st.secrets["OPENAI_API_KEY"]
 from datetime import datetime
 
 # ==========================
@@ -427,6 +426,7 @@ st.markdown("""
 # ==========================
 # OPENAI KEY (keep in secrets for production)
 # ==========================
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 # ==========================
 # GOOGLE SHEETS SETUP
@@ -790,6 +790,7 @@ st.markdown("""
     © Hisaab Kitab
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

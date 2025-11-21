@@ -387,7 +387,7 @@ def login_ui():
     if st.button("Login Now"):
     # LOGIN SECTION – FIXED VERSION
     if st.button("Login Now", use_container_width=False):
-        try:
+         try:
             res = supabase.auth.sign_in_with_password({
                  "email": email,
                  "password": password
@@ -797,6 +797,7 @@ st.markdown("""
     © Hisaab Kitab
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

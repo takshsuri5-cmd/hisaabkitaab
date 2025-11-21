@@ -439,7 +439,7 @@ with col2:
                 font-weight:900;
                 font-size:50px;
                 transform: translateX(-80px);
-                color: 1E90FF !important;
+                color: 3CB371 !important;
             ">
                 Hisaab Kitab  ( Sales Manager )
             </h1>
@@ -761,5 +761,6 @@ st.markdown("""
     © Hisaab Kitab
 </div>
 """, unsafe_allow_html=True)
+
 
 

@@ -241,7 +241,7 @@ div[role=radiogroup] > label:active {{
 
 /* Remove extra gap below radios */
 .stRadio {{
-    margin-bottom: -1000px !important;
+    margin-bottom: -1200px !important;
 }}
 {{ /* Pull entire Cash + UPI row LEFT */ }}
 .stRadio > div {{
@@ -779,6 +779,7 @@ st.markdown("""
     © Hisaab Kitab
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

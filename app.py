@@ -78,9 +78,10 @@ def apply_styles(bg_url: str):
     }}
 
 
-    /* General font */
-    @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;600;700;900&display=swap');
-    html, body, div, span, label, input, textarea, select, button, p, h1, h2, h3, h4, h5, h6 {{
+   @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;600;700;900&display=swap');
+    
+    /* Force font across all Streamlit elements */
+    html, body, * , [class*="css"] {{
         font-family: "Bodoni Moda", serif !important;
     }}
 
@@ -346,11 +347,7 @@ def login_ui():
         margin-top: 10px;
         margin-left: 1200px;
     }
-    /* General font */
-    @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;600;700;900&display=swap');
-    html, body, div, span, label, input, textarea, select, button, p, h1, h2, h3, h4, h5, h6 {{
-        font-family: "Bodoni Moda", serif !important;
-    }}
+    
 
 
         
@@ -811,6 +808,7 @@ st.markdown("""
     © Hisaab Kitab
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

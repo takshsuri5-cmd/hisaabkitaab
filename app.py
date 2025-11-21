@@ -385,7 +385,7 @@ def login_ui():
     password = st.text_input("🔑 Password", type="password", key="login_pass", placeholder="Enter password")
 
     if st.button("Login Now"):
-    try:
+        try:
         res = supabase.auth.sign_in_with_password({
             "email": email,
             "password": password
@@ -795,6 +795,7 @@ st.markdown("""
     © Hisaab Kitab
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

@@ -437,9 +437,9 @@ with col2:
             <h1 style="
                 margin: 0;
                 font-weight:900;
-                font-size:60px;
+                font-size:50px;
                 transform: translateX(-80px);
-                color: #1E90FF !important;
+                color: 1E90FF !important;
             ">
                 Hisaab Kitab  ( Sales Manager )
             </h1>
@@ -761,4 +761,5 @@ st.markdown("""
     © Hisaab Kitab
 </div>
 """, unsafe_allow_html=True)
+
 

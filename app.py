@@ -426,7 +426,7 @@ st.markdown("""
 # ==========================
 # OPENAI KEY (keep in secrets for production)
 # ==========================
-openai.api_key = "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"  # replace or use st.secrets["OPENAI_API_KEY"]
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 # ==========================
 # GOOGLE SHEETS SETUP
@@ -790,6 +790,7 @@ st.markdown("""
     © Hisaab Kitab
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

@@ -483,7 +483,7 @@ with st.form("entry_form", clear_on_submit=True):
 
     # --- Mode of Payment (Working + Clean) ---
     # --- MODE OF PAYMENT (Perfect Alignment) ---
-    col1, col2 = st.columns([1, 1])
+    col1, col2 = st.columns([1, 3])
     with col1:
         st.write("Mode of Payment")
     with col2:
@@ -777,6 +777,7 @@ st.markdown("""
     © Hisaab Kitab
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

@@ -663,7 +663,7 @@ if st.session_state.edit_row is not None:
 
         st.success("✅ Updated successfully!")
         st.session_state.edit_row = None
-        st.experimental_rerun()
+        st.rerun()
 
     if cancel_col.button("✖ Cancel"):
         st.session_state.edit_row = None
@@ -798,6 +798,7 @@ st.markdown("""
     © Hisaab Kitab
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

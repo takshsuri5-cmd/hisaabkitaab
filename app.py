@@ -385,6 +385,8 @@ def login_ui():
     password = st.text_input("🔑 Password", type="password", key="login_pass", placeholder="Enter password")
 
     if st.button("Login Now"):
+    # LOGIN SECTION – FIXED VERSION
+if st.button("Login Now", use_container_width=False):
     try:
         res = supabase.auth.sign_in_with_password({
             "email": email,
@@ -394,7 +396,7 @@ def login_ui():
         if res.user:
             st.session_state.user = res.user
             st.session_state.shop_id = res.user.id
-            st.experimental_rerun()
+            st.experimental_rerun()  # 🔁 direct rerun (no duplicate message)
 
         else:
             st.warning("❌ Wrong email or password")
@@ -795,6 +797,7 @@ st.markdown("""
     © Hisaab Kitab
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

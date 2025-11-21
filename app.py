@@ -86,10 +86,10 @@ def apply_styles(bg_url: str):
 
     /* Headings black */
     h1{{color: #5F9EA0}}
-    h2, h3, h4, h5, h6, label {{
-        color: #000 !important;
-        font-weight: 700 !important;
-    }}
+    h2, h3, h4, h5, h6,
+label, p, span {{
+    color: black !important;
+}}
 
     /* Input boxes: black bg, white text */
     input, textarea, select {{
@@ -811,6 +811,7 @@ st.markdown("""
     © Hisaab Kitab
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

@@ -239,14 +239,12 @@ div[role=radiogroup] > label:active {{
     font-weight: 600 !important;
 }}
 
-/* Remove extra gap below radios */
-.stRadio {{
-    margin-bottom: -1900px !important;
+/* Align Mode of Payment on ONE ROW */
+.stRadio > label, .stRadio > div {{  
+    display: inline-block !important;
+    margin-right: 15px !important;
 }}
-{{ /* Pull entire Cash + UPI row LEFT */ }}
-.stRadio > div {{
-    margin-left: -140px !important;
-}}
+
 
 
 /* Make Metrics Bigger & Bolder */
@@ -779,6 +777,7 @@ st.markdown("""
     © Hisaab Kitab
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

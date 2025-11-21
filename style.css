@@ -1,0 +1,260 @@
+def apply_styles(bg_url: str):
+    st.markdown(f"""
+    <style>
+    .stApp {{
+        background-image: url("{bg_url}");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }}
+
+    /* General font */
+    @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;600;700;900&display=swap');
+    html, body, div, span, label, input, textarea, select, button, p, h1, h2, h3, h4, h5, h6 {{
+        font-family: "Bodoni Moda", serif !important;
+    }}
+
+    /* Headings black */
+    h1{{color: #5F9EA0}}
+    h2, h3, h4, h5, h6, label {{
+        color: #000 !important;
+        font-weight: 700 !important;
+    }}
+
+    /* Input boxes: black bg, white text */
+    input, textarea, select {{
+        background-color: #000 !important;
+        color: #fff !important;
+        border-radius: 8px !important;
+        border: 1px solid #333 !important;
+        padding: 6px !important;
+    }}
+
+    /* Quick Edit section text black */
+    [data-testid="stHorizontalBlock"] {{
+        color: #000000 !important;
+    }}
+
+    /* Metric text black */
+    [data-testid="stMetricValue"], [data-testid="stMetricDelta"], [data-testid="stMetricLabel"] {{
+        color: #000 ;
+    }}
+/* Only Header Glass Card */
+.header-glass {{
+    width: 100% !important;
+    background: rgba(120, 0, 0, 0.45);
+    padding: 3px;
+    border-radius: 22px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(200, 0, 0, 0.55);
+    box-shadow: 0 6px 20px rgba(70, 0, 0, 0.35);
+}}
+/* Sub Header Glass Card */
+.subheader-glass {{
+    width: 100% !important;
+    background: rgba(120, 0, 0, 0.45);   /* Same dark red */
+    padding: 3px;
+    border-radius: 22px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(200, 0, 0, 0.55);
+    box-shadow: 0 6px 20px rgba(70, 0, 0, 0.35);
+}}
+
+    /* Glass cards */
+    .glass-card {{
+        background: rgba(0, 0, 0, 0.75);
+        border-radius: 18px;
+        padding: 1px;
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        margin-bottom: 16px;
+    }}
+/* PURE WHITE FOOTER CARD */
+.white-footer-card {{
+    background: rgba(255, 255, 255, 1);   /* Full pure white */
+    border-radius: 18px;
+    padding: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.15); /* soft grey border */
+    backdrop-filter: blur(0px);           /* no blur (pure solid) */
+    margin-top: 25px;
+    text-align: center;
+}}
+    /* Footer */
+    .white-footer-card {{
+        color: #000 !important;
+        text-align: center;
+        font-weight: 700 !important;
+    }}
+
+
+
+
+    /* ✅ Force Streamlit button text to white */
+    div.stButton > button:first-child {{
+        color: #fff !important;
+        font-weight: 700 !important;
+        background-color: #000 !important;  /* optional, keeps dark style */
+        border: 1px solid #333 !important;
+    }}
+    div.stButton > button:first-child:hover {{
+        color: #fff !important;
+        background-color: #222 !important;
+        
+    }}
+    
+/* Summary text box */
+.premium-summary-box {{
+    background: rgba(255,255,255,0.15);
+    padding: 20px;
+    border-radius: 15px;
+    color: black !important;
+    font-size: 18px;
+    line-height: 1.7;
+    font-weight: 500;
+    border-left: 4px solid gold;
+}}
+div[role=radiogroup] > label {{
+    background-color: #111;
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 6px;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    color: white !important;
+    cursor: pointer;
+}}
+
+div[role=radiogroup] input {{
+    display: none !important;
+}}
+
+div[role=radiogroup] > label:hover {{
+    background-color: #222;
+}}
+
+div[role=radiogroup] > label:active {{
+    background-color: #333;
+}}
+/* Make ALL form labels dark black */
+.stApp label, .stApp p {{
+    color: black !important;
+    font-weight: 700 !important;
+}}
+/* Restore default text color for buttons */
+.stApp button, .stApp button * {{
+    color: white !important;
+}}
+
+
+[data-testid="stRadio"] label {{
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin-right: 20px !important;
+    box-shadow: none !important;
+}}
+
+[data-testid="stRadio"] label p {{
+    color: black !important;     /* ⭐ text now BLACK */
+    font-weight: 700 !important;
+    margin: 0 !important;
+}}
+
+[data-testid="stRadio"] label:hover {{
+    background: none !important;
+}}
+
+[data-testid="stRadio"] svg {{
+    fill: black !important;     /* ⭐ radio circle black */
+    stroke: black !important;
+}}
+/* Bring radio inline with title */
+[data-testid="stRadio"] {{
+    margin-top: -8px !important;
+    padding-top: 0 !important;
+}}
+
+/* Remove space inside options */
+[data-testid="stRadio"] label {{
+    margin-right: 20px !important;
+    padding: 0 !important;
+}}
+
+/* Radio text spacing fix */
+[data-testid="stRadio"] label p {{
+    margin: 0 0 0 4px !important;
+    padding: 0 !important;
+}}
+/* Reduce space above radio buttons */
+.stRadio > div {{
+    margin-top: -21px !important;
+}}
+
+/* Align Cash & UPI row properly */
+.stRadio label p {{
+    color: black !important;
+    font-weight: 600 !important;
+}}
+
+/* Remove extra gap below radios */
+.stRadio {{
+    margin-bottom: -1000px !important;
+}}
+{{ /* Pull entire Cash + UPI row LEFT */ }}
+.stRadio > div {{
+    margin-left: -140px !important;
+}}
+
+
+/* Make Metrics Bigger & Bolder */
+[data-testid="stMetricValue"] {{
+    font-size: 32px !important;     /* Value size (₹, numbers) */
+    font-weight: 900 !important;
+    color: slateblue !important;
+}}
+
+[data-testid="stMetricLabel"] {{
+    font-size: 120px !important;     /* Label size (Cash, UPI, etc.) */
+    font-weight: 1000 !important;
+    color: black !important;
+}}
+
+[data-testid="stMetricDelta"] {{
+    font-size: 18px !important;  
+}}
+/* Disable typing but DO NOT hide input */
+.stSelectbox div[data-baseweb="select"] input {{
+    pointer-events: none !important;     /* No typing */
+    caret-color: transparent !important;  /* No cursor */
+    color: transparent !important;        /* No text visible */
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+}}
+
+/* Remove placeholder text completely */
+.stSelectbox div[data-baseweb="select"] input::placeholder {{
+    color: transparent !important;
+}}
+
+/* Hide search box inside dropdown menu */
+div[data-baseweb="popover"] input {{
+    display: none !important;
+}}
+
+
+
+
+
+
+
+    </style>
+    """, unsafe_allow_html=True)
+
+
+apply_styles("https://i.pinimg.com/736x/e0/57/5b/e0575bac3b38b3c19d35118649c3a64e.jpg")

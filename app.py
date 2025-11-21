@@ -301,7 +301,7 @@ div[data-baseweb="popover"] input {{
     """, unsafe_allow_html=True)
 
 
-apply_styles("https://i.pinimg.com/736x/e0/57/5b/e0575bac3b38b3c19d35118649c3a64e.jpg")
+
 
 from supabase import create_client, Client
 
@@ -785,5 +785,6 @@ st.markdown("""
     © Hisaab Kitab
 </div>
 """, unsafe_allow_html=True)
+
 
 

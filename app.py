@@ -40,11 +40,17 @@ def apply_styles(bg_url: str):
     st.markdown(f"""
     <style>
     .stApp {{
-        background-image: url("{bg_url}");
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
+        background: url("{https://i.pinimg.com/736x/e0/57/5b/e0575bac3b38b3c19d35118649c3a64e.jpg}") no-repeat center center fixed !important;
+        background-size: cover !important;       /* Fullscreen */
     }}
+
+    /* READABLE MAIN CONTENT BOX – IMPORTANT */
+    .main .block-container {{
+        background: rgba(255,255,255,0.90) !important;  /* solid white, readable */
+        border-radius: 10px;
+        padding: 25px;
+    }}
+
 
     /* General font */
     @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;600;700;900&display=swap');
@@ -779,4 +785,5 @@ st.markdown("""
     © Hisaab Kitab
 </div>
 """, unsafe_allow_html=True)
+
 

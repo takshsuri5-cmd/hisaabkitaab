@@ -1,6 +1,0 @@
-streamlit
-supabase
-pandas
-openai
-matplotlib
-numpy

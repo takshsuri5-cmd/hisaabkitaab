@@ -395,7 +395,7 @@ def login_ui():
         if res.user:
             st.session_state.user = res.user
             st.session_state.shop_id = res.user.id
-            st.experimental_rerun()
+            st.rerun()
 
         else:
             st.warning("❌ Wrong email or password")
@@ -798,6 +798,7 @@ st.markdown("""
     © Hisaab Kitab
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

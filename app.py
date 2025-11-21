@@ -245,6 +245,18 @@ div[role=radiogroup] > label:active {{
     margin-right: 15px !important;
 }}
 
+/* Keep Cash & UPI INLINE + close to label */
+.stRadio > div {{
+    display: inline-flex !important;
+    align-items: center !important;
+    margin-left: -10px !important;   /* pulls it closer to label */
+}}
+
+.stRadio label {{
+    margin-right: 12px !important;   /* spacing between Cash and UPI */
+}}
+
+
 
 
 /* Make Metrics Bigger & Bolder */
@@ -777,6 +789,7 @@ st.markdown("""
     © Hisaab Kitab
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

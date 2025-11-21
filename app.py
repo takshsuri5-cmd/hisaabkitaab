@@ -482,29 +482,13 @@ openai.api_key = "sk-proj-0q4nsaqqdXnu_uR3PAGYgCwW1F89GM_4mPj8LZyY1LPGKPS1sOVzWZ
 st.markdown("<div class='header-glass'>", unsafe_allow_html=True)
 
 
-col1, col2, col3 = st.columns([1, 6, 1])
+c1, c2 = st.columns([1, 4])  # Desktop okay
+with c1:
+    st.image("hisaab_logo.png", width=70)
 
-with col2:
-    inner_col1, inner_col2 = st.columns([1, 4])
+with c2:
+    st.markdown("<h1>Hisaab Kitab (Sales Manager)</h1>", unsafe_allow_html=True)
 
-    with inner_col1:
-        st.image("hisaab_logo.png", width=100)
-
-    with inner_col2:
-        st.markdown(
-            """
-            <h1 style="
-                margin: 0;
-                font-weight:900;
-                font-size:60px;
-                transform: translateX(-80px);
-                color: #1E90FF !important;
-            ">
-                Hisaab Kitab  ( Sales Manager )
-            </h1>
-            """, 
-            unsafe_allow_html=True
-        )
 
 # closing div
 st.markdown("</div>", unsafe_allow_html=True)
@@ -830,6 +814,7 @@ st.markdown("""
     © Hisaab Kitab
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

@@ -40,8 +40,11 @@ def apply_styles(bg_url: str):
     st.markdown(f"""
     <style>
     .stApp {{
-        background: url("{https://i.pinimg.com/736x/e0/57/5b/e0575bac3b38b3c19d35118649c3a64e.jpg}") no-repeat center center fixed !important;
-        background-size: cover !important;       /* Fullscreen */
+        background: url("{bg_url}") !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        background-attachment: fixed !important;
     }}
 
     /* READABLE MAIN CONTENT BOX – IMPORTANT */
@@ -785,6 +788,7 @@ st.markdown("""
     © Hisaab Kitab
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

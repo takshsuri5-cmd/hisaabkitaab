@@ -392,11 +392,16 @@ def login_ui():
         })
 
         # CHECK USER FIRST
+        if st.button("Login Now"):
+    try:
+        res = supabase.auth.sign_in_with_password({
+            "email": email,
+            "password": password
+        })
+
         if res.user:
             st.session_state.user = res.user
             st.session_state.shop_id = res.user.id
-
-            # RERUN IMMEDIATELY — NO SUCCESS MESSAGE FIRST
             st.experimental_rerun()
 
         else:
@@ -404,6 +409,7 @@ def login_ui():
 
     except Exception as e:
         st.error(f"Login failed — {e}")
+
 
 
 
@@ -796,6 +802,7 @@ st.markdown("""
     © Hisaab Kitab
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

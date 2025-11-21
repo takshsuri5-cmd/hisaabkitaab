@@ -18,6 +18,29 @@ st.set_page_config(
     page_title="Hisaab Kitab",
     layout="wide"
 )
+# ==========================
+# CUSTOM UI (Background)
+# ==========================
+def apply_styles(bg_url: str):
+    st.markdown(f"""
+    <style>
+    .stApp {{
+        background: url("{bg_url}") no-repeat center center fixed !important;
+        background-size: cover !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }}
+
+    .main .block-container {{
+        background: rgba(255,255,255,0.90) !important;
+        border-radius: 12px;
+        padding: 25px;
+    }}
+    </style>
+    """, unsafe_allow_html=True)
+
+# CALL HERE:
+apply_styles("https://i.pinimg.com/736x/e0/57/5b/e0575bac3b38b3c19d35118649c3a64e.jpg")
 
 # ==========================
 # GLOBAL STATE (for edit flow)
@@ -788,6 +811,7 @@ st.markdown("""
     © Hisaab Kitab
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

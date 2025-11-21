@@ -384,22 +384,27 @@ def login_ui():
     email = st.text_input("📧  Email", key="login_email", placeholder="Enter your email")
     password = st.text_input("🔑 Password", type="password", key="login_pass", placeholder="Enter password")
 
-    if st.button("Login Now", use_container_width=False):
-        try:
-            res = supabase.auth.sign_in_with_password({
-                "email": email,
-                "password": password
-            })
-            if res.user:
-                st.session_state.user = res.user
-                st.session_state.shop_id = res.user.id 
-                st.success("Login successful!")
-                st.experimental_rerun()
-                st.session_state.shop_id = res.user.id  # <-- THIS IS CRUCIAL!
-            else:
-                st.error("Wrong email or password")
-        except Exception:
-            st.error("Login failed — contact admin")
+    if st.button("Login Now"):
+    try:
+        res = supabase.auth.sign_in_with_password({
+            "email": email,
+            "password": password
+        })
+
+        # CHECK USER FIRST
+        if res.user:
+            st.session_state.user = res.user
+            st.session_state.shop_id = res.user.id
+
+            # RERUN IMMEDIATELY — NO SUCCESS MESSAGE FIRST
+            st.experimental_rerun()
+
+        else:
+            st.warning("❌ Wrong email or password")
+
+    except Exception as e:
+        st.error(f"Login failed — {e}")
+
 
     st.markdown("</div>", unsafe_allow_html=True)
     st.markdown("</div>", unsafe_allow_html=True)
@@ -790,6 +795,7 @@ st.markdown("""
     © Hisaab Kitab
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

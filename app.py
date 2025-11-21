@@ -250,7 +250,7 @@ div[role=radiogroup] > label:active {{
     display: inline-flex !important;
     align-items: center !important;
     margin-top: 3px !important; 
-    margin-left: -192px !important;   /* pulls it closer to label */
+    margin-left: -201px !important;   /* pulls it closer to label */
 }}
 
 .stRadio label {{
@@ -790,6 +790,7 @@ st.markdown("""
     © Hisaab Kitab
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

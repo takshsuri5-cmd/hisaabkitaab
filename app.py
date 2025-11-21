@@ -92,6 +92,28 @@ label, p, span {{
     color: black !important;
 }}
 
+        /* 📱 MOBILE SCREEN STYLING  */
+@media (max-width: 768px) {{
+    /* Reduce heading size */
+    h1 {{
+        font-size: 32px !important;
+        text-align: center !important;
+        margin: 0 !important;
+    }}
+    h2 {{
+        font-size: 24px !important;
+        text-align: center !important;
+    }}
+    .premium-summary-box {{
+        font-size: 15px !important;
+        line-height: 1.4 !important;
+    }}
+    .stButton > button {{
+        width: 100% !important;   /* Full width buttons on mobile */
+    }}
+}}
+
+
     /* Input boxes: black bg, white text */
     input, textarea, select {{
         background-color: #000 !important;
@@ -808,6 +830,7 @@ st.markdown("""
     © Hisaab Kitab
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

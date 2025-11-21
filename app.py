@@ -1,3 +1,4 @@
+
 # -*- coding: utf-8 -*-
 """
 Created on Sat Nov 15 19:39:25 2025
@@ -385,24 +386,24 @@ def login_ui():
     password = st.text_input("🔑 Password", type="password", key="login_pass", placeholder="Enter password")
 
     if st.button("Login Now"):
-    # LOGIN SECTION – FIXED VERSION
-    if st.button("Login Now", use_container_width=False):
-         try:
-            res = supabase.auth.sign_in_with_password({
-                 "email": email,
-                 "password": password
+       try:
+        res = supabase.auth.sign_in_with_password({
+            "email": email,
+            "password": password
         })
 
         if res.user:
             st.session_state.user = res.user
             st.session_state.shop_id = res.user.id
-            st.experimental_rerun()  # 🔁 direct rerun (no duplicate message)
+            st.experimental_rerun()
 
         else:
             st.warning("❌ Wrong email or password")
 
-    except Exception as e:
+       except Exception as e:
         st.error(f"Login failed — {e}")
+
+
 
 
 
@@ -797,6 +798,8 @@ st.markdown("""
     © Hisaab Kitab
 </div>
 """, unsafe_allow_html=True)
+
+
 
 
 
